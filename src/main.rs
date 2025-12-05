@@ -13,7 +13,7 @@ fn main() -> anyhow::Result<()> {
     let anchor = "The dog barked";
     let sentences = vec![
         "The canine made noise", // Meaning match
-        "The cat slept",         // No match
+        "The cat slept",         // No match - Rubblish
     ];
 
     // 3. Generate Vectors
