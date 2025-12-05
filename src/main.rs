@@ -5,7 +5,14 @@ fn main() -> anyhow::Result<()> {
 
     // 1. Initialize the Model
     // Fixed capitalization: AllMiniLML6V2
-    /**/
+    /*
+        "Mind Reader." It checks your model_cache folder. 
+        If the MiniLM model isn't there, 
+        it downloads it from the internet. 
+        If it is there,
+         it loads the neural network into your computer's 
+         RAM so it is ready to process text.
+    */
     let model = TextEmbedding::try_new(
         InitOptions::new(EmbeddingModel::AllMiniLML6V2)
             .with_show_download_progress(true)
