@@ -6,4 +6,4 @@ edition = "2024"
 
 [dependencies]
 anyhow = "1.0"
-fastembed = "3"
+fastembed = "4"
