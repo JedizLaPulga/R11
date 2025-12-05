@@ -1,16 +1,24 @@
 use fastembed::{TextEmbedding, InitOptions, EmbeddingModel};
 
 fn main() -> anyhow::Result<()> {
+
+
     // 1. Initialize the Model
     // Fixed capitalization: AllMiniLML6V2
+    /**/
     let model = TextEmbedding::try_new(
         InitOptions::new(EmbeddingModel::AllMiniLML6V2)
             .with_show_download_progress(true)
             .with_cache_dir("model_cache".into())
     )?;
 
+
+
     // 2. The Input Data
-    let anchor = "The dog barked";
+    //The Anchor: This is your "search query" or the standard you are comparing against.
+    let anchor = "The dog barked"; 
+
+    //The Sentences: These are the "candidates" or documents you want to check for similarity.
     let sentences = vec![
         "The canine made noise", // Meaning match
         "The cat slept",         // No match - Rubblish
